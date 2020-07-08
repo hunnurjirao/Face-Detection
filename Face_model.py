@@ -1,5 +1,3 @@
-import numpy as np 
-import matplotlib.pyplot as plt
 from keras import backend as K
 from keras.layers import Conv2D, ZeroPadding2D, Activation, Input
 from keras.layers.core import Lambda, Flatten, Dense
