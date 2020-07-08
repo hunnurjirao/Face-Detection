@@ -14,7 +14,7 @@ def Face_model(input_shape):
     #layer 1
 
     x = Conv2D(64, (3,3), strides=(2,2))(x)
-    x=BatchNormalization(axis=1, momentum=0.99, epsilon=0.0001)(x)
+    x = BatchNormalization(axis=1, momentum=0.99, epsilon=0.0001)(x)
     x = Activation('relu')(x)
 
     x = MaxPooling2D(pool_size=3, strides=2)(x)
@@ -26,7 +26,6 @@ def Face_model(input_shape):
     x = Activation('relu')(x)
 
     x = MaxPooling2D(pool_size=3, strides=2)(x)
-
     x = ZeroPadding2D((1,1))(x)
 
     #layer 3
@@ -44,14 +43,11 @@ def Face_model(input_shape):
     x = Activation('relu')(x)
 
     x = Flatten()(x)
-
     x = Dense(128)(x)
-    x = Activation('relu')(x)
-    
+    x = Activation('relu')(x) 
     x = Lambda(lambda  a: K.l2_normalize(a,axis=1))(x)
 
     F_model = Model(inputs = x_input, outputs = x)
-
     F_model.summary()
 
     return F_model
