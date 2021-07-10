@@ -1,9 +1,9 @@
-# Face-Detection
-Face Detection using CNN
+# Face Recognition and Verification
+Face Recognition and Verification using CNN
 
 ## Overview
 
-Face Detection is one of the applications of Convolution Neural Networks which comes under *Supervised Learning Algorithm.* Here Face verification differs from Face Recognition.(Here I have done *face verification*)
+Face Detection is one of the applications of Convolution Neural Networks which comes under *Supervised Learning Algorithm.* 
 
 **Face Verification**: Given input as image, name/ID and gives output whether the input image is that of the claimed person or not.
 
